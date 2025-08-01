@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Music Recommender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="spotify-bg">
+  <header class="main-header">
+    <div class="logo">MusicFlow</div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search songs or artists...">
+        <button id="searchButton">Search</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="artists.html" class="nav-link">Artists</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h1>Choose Genre</h1>
+    <p class="subtitle">Discover music recommendations tailored to your taste.</p>
+    <div class="genre-buttons">
+      <button onclick="selectGenre('pop')">Pop</button>
+      <button onclick="selectGenre('rock')">Rock</button>
+      <button onclick="selectGenre('hiphop')">Hip-Hop</button>
+    </div>
+
+    <section class="featured-section">
+      <h2>Featured Playlists</h2>
+      <div class="playlist-cards-container">
+        <div class="playlist-card">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84752dac66193cae43932233a5" alt="Chill Beats Playlist">
+          <h3>Chill Beats</h3>
+          <p>Relax and unwind with smooth tunes.</p>
+          <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_mVvnZOzJPD1C1SqIu44Hwl9AT00fafKNs&playnext=1&si=S00lCq7k7nwUpRef" target="_blank" class="small-play-btn" aria-label="Play Chill Beats on YouTube">▶</a>
+        </div>
+        <div class="playlist-card">
+          <img src="https://a10.gaanacdn.com/gn_img/albums/D0PKLqr3Gl/0PKLpZ7nKG/size_m.jpg" alt="Workout Hits Playlist">
+          <h3>Workout Hits</h3>
+          <p>Get energized with high-tempo tracks.</p>
+          <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_lFuA--WIEukXUJ93HkgnVOv0Bs02c_O4g&playnext=1&si=JEQIe5nXlzwRpxhA" target="_blank" class="small-play-btn" aria-label="Play Workout Hits on YouTube">▶</a>
+        </div>
+        <div class="playlist-card">
+          <img src="https://i.scdn.co/image/ab67706f0000000211abcd9bb587da30485c993d" alt="Focus Mode Playlist">
+          <h3>Focus Mode</h3>
+          <p>Instrumental tracks for deep concentration.</p>
+          <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_nZJzoZEBYRptA2XXskbxGTvKkevapT_F4&playnext=1&si=sWq-1BAJy5-tAU6q" target="_blank" class="small-play-btn" aria-label="Play Focus Mode on YouTube">▶</a>
+        </div>
+        <div class="playlist-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9twOpB0f-OrtW1qma_SLNvdMrnX5YKY6j6Q&s" alt="Throwback Jams Playlist">
+          <h3>Throwback Jams</h3>
+          <p>Nostalgic hits from the past decades.</p>
+          <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_m0s0ctV0GL5LQ-ezVkvlEeENYDuSxxLa8&playnext=1&si=Y9f23MXPjDPzRB_q" target="_blank" class="small-play-btn" aria-label="Play Throwback Jams on YouTube">▶</a>
+        </div>
+        <div class="playlist-card">
+          <img src="https://geo-media.beatsource.com/image_size/500x500/e/8/f/e8f32668-3ece-4bd8-a95a-06b360bb8f6b.jpg" alt="Electronic Vibes Playlist">
+          <h3>Electronic Vibes</h3>
+          <p>Chill and upbeat electronic tracks.</p>
+          <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_mGt2vOEjyX4yUCxY4OrzVzZLR8nPXGPgE&playnext=1&si=aJGqukSu8ZXF1j3a" target="_blank" class="small-play-btn" aria-label="Play Electronic Vibes on YouTube">▶</a>
+        </div>
+        <div class="playlist-card">
+          <img src="https://i1.sndcdn.com/artworks-3cba28d6-9f6d-4342-9e88-1425596c4cb7-0-t1080x1080.jpg" alt="Acoustic Calm Playlist">
+          <h3>Acoustic Calm</h3>
+          <p>Soothing acoustic melodies for relaxation.</p>
+          <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_nDL8KeBrUagwyISwNmyEiSfYgz1gVCesg&playnext=1&si=7Marj23nBFNNzXqt" target="_blank" class="small-play-btn" aria-label="Play Acoustic Calm on YouTube">▶</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-songs-section">
+      <h2>Featured Songs</h2>
+      <div class="songs-grid-container">
+        <div class="featured-song-card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/JGwWNGJdvx8"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h3>Shape of You</h3>
+          <p>Ed Sheeran</p>
+          <a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" target="_blank" class="song-link-btn youtube-btn" aria-label="Watch Shape of You on YouTube">Watch on YouTube</a>
+          <a href="https://music.youtube.com/watch?v=JGwWNGJdvx8" target="_blank" class="song-link-btn youtube-music-btn" aria-label="Play Shape of You on YouTube Music">Play on YouTube Music</a>
+          <a href="https://open.spotify.com/track/7qiZfU4dY1lWllzX7mP3wj" target="_blank" class="song-link-btn spotify-btn" aria-label="Play Shape of You on Spotify">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/tvTRZJ-4EyI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h3>HUMBLE.</h3>
+          <p>Kendrick Lamar</p>
+          <a href="https://www.youtube.com/watch?v=tvTRZJ-4EyI" target="_blank" class="song-link-btn youtube-btn" aria-label="Watch HUMBLE. on YouTube">Watch on YouTube</a>
+          <a href="https://music.youtube.com/watch?v=tvTRZJ-4EyI" target="_blank" class="song-link-btn youtube-music-btn" aria-label="Play HUMBLE. on YouTube Music">Play on YouTube Music</a>
+          <a href="https://open.spotify.com/track/7KXjTSCq5nL1WJgkAINCFY" target="_blank" class="song-link-btn spotify-btn" aria-label="Play HUMBLE. on Spotify">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/fJ9rUzIMcZQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h3>Bohemian Rhapsody</h3>
+          <p>Queen</p>
+          <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank" class="song-link-btn youtube-btn" aria-label="Watch Bohemian Rhapsody on YouTube">Watch on YouTube</a>
+          <a href="https://music.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank" class="song-link-btn youtube-music-btn" aria-label="Play Bohemian Rhapsody on YouTube Music">Play on YouTube Music</a>
+          <a href="https://open.spotify.com/track/3z8h0lnJv302BZwSAe3C74" target="_blank" class="song-link-btn spotify-btn" aria-label="Play Bohemian Rhapsody on Spotify">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/4NRXx6U8ABQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h3>Blinding Lights</h3>
+          <p>The Weeknd</p>
+          <a href="https://www.youtube.com/watch?v=4NRXx6U8ABQ" target="_blank" class="song-link-btn youtube-btn" aria-label="Watch Blinding Lights on YouTube">Watch on YouTube</a>
+          <a href="https://music.youtube.com/watch?v=4NRXx6U8ABQ" target="_blank" class="song-link-btn youtube-music-btn" aria-label="Play Blinding Lights on YouTube Music">Play on YouTube Music</a>
+          <a href="https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b" target="_blank" class="song-link-btn spotify-btn" aria-label="Play Blinding Lights on Spotify">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/TUVcZfQe-Kw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Levitating</h3>
+            <p>Dua Lipa</p>
+            <a href="https://www.youtube.com/watch?v=TUVcZfQe-Kw" target="_blank" class="song-link-btn youtube-btn">Watch on YouTube</a>
+            <a href="https://music.youtube.com/watch?v=TUVcZfQe-Kw" target="_blank" class="song-link-btn youtube-music-btn">Play on YouTube Music</a>
+            <a href="https://open.spotify.com/track/39LLxExYz6ewLAcYrzQQyP" target="_blank" class="song-link-btn spotify-btn">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/7wtfhZwyrcc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Believer</h3>
+            <p>Imagine Dragons</p>
+            <a href="https://www.youtube.com/watch?v=7wtfhZwyrcc" target="_blank" class="song-link-btn youtube-btn">Watch on YouTube</a>
+            <a href="https://music.youtube.com/watch?v=7wtfhZwyrcc" target="_blank" class="song-link-btn youtube-music-btn">Play on YouTube Music</a>
+            <a href="https://open.spotify.com/track/0pqnGHJpmpx21ceOOdGzHc" target="_blank" class="song-link-btn spotify-btn">Play on Spotify</a>
+        </div>
+         <div class="featured-song-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/H5v3kku4y6Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>As It Was</h3>
+            <p>Harry Styles</p>
+            <a href="https://www.youtube.com/watch?v=H5v3kku4y6Q" target="_blank" class="song-link-btn youtube-btn">Watch on YouTube</a>
+            <a href="https://music.youtube.com/watch?v=H5v3kku4y6Q" target="_blank" class="song-link-btn youtube-music-btn">Play on YouTube Music</a>
+            <a href="https://open.spotify.com/search/As%20It%20Was%20Harry%20Styles" target="_blank" class="song-link-btn spotify-btn">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/b1kbLwvqugk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Anti-Hero</h3>
+            <p>Taylor Swift</p>
+            <a href="https://www.youtube.com/watch?v=b1kbLwvqugk" target="_blank" class="song-link-btn youtube-btn">Watch on YouTube</a>
+            <a href="https://music.youtube.com/watch?v=b1kbLwvqugk" target="_blank" class="song-link-btn youtube-music-btn">Play on YouTube Music</a>
+            <a href="https://open.spotify.com/search/Anti-Hero%20Taylor%20Swift" target="_blank" class="song-link-btn spotify-btn">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/MYSVMgRr6pw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Take Me to Church</h3>
+            <p>Hozier</p>
+            <a href="https://www.youtube.com/watch?v=MYSVMgRr6pw" target="_blank" class="song-link-btn youtube-btn">Watch on YouTube</a>
+            <a href="https://music.youtube.com/watch?v=MYSVMgRr6pw" target="_blank" class="song-link-btn youtube-music-btn">Play on YouTube Music</a>
+            <a href="https://open.spotify.com/search/Take%20Me%20to%20Church%20Hozier" target="_blank" class="song-link-btn spotify-btn">Play on Spotify</a>
+        </div>
+        <div class="featured-song-card">
+            <div class="video-container">
+                 <iframe src="https://www.youtube.com/embed/OlStmta0Vh4?si=Iqm6VWRTdDkg5i-G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>I Was Never There</h3>
+            <p>The Weeknd ft. Gesaffelstein</p>
+            <a href="https://youtu.be/OlStmta0Vh4?si=lxpzhYk6TWAvfnFG" target="_blank" class="song-link-btn youtube-btn">Watch on YouTube</a>
+            <a href="https://music.youtube.com/watch?v=OlStmta0Vh4&list=RDAMVMOlStmta0Vh4" target="_blank" class="song-link-btn youtube-music-btn">Play on YouTube Music</a>
+            <a href="https://open.spotify.com/track/1cKHdTo9u0ZymJdPGSh6nq?si=89ac9c8619ae4595" target="_blank" class="song-link-btn spotify-btn">Play on Spotify</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>Why MusicFlow?</h2>
+      <p>
+        MusicFlow provides a seamless way to discover new music based on your preferred genres. Our curated selections are designed to introduce you to tracks you'll love, inspired by the best in music streaming. Get started by selecting a genre above!
+      </p>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 MusicFlow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function selectGenre(genre) {
+      window.location.href = `recommendations.html?genre=${genre}`;
+    }
+
+    document.getElementById('searchButton').addEventListener('click', function() {
+        const query = document.getElementById('searchInput').value;
+        if (query) {
+            window.location.href = `recommendations.html?search=${encodeURIComponent(query)}`;
+        }
+    });
+
+    document.getElementById('searchInput').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            document.getElementById('searchButton').click();
+        }
+    });
+  </script>
+</body>
+</html>
